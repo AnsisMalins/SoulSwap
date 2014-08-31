@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+// Took me a while to figure out a simple and reusable solution to detecting when we're on the
+// ground.
+
 /// <summary>Doesn't cover the case where we might be touching multiple things at once.</summary>
 public class TouchSensor : MonoBehaviour
 {

@@ -1,6 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// The base class for AI that contains all the convenience stuff that would have to otherwise be
+// replicated in every AI class. Translates simple commands into control input. Notice that to
+// support the soul swapping mechanic, I can't cache the Creature pointer. Most importatly, I
+// must refresh it after every yield because it may have changed in the meantime.
+
 public class RobotSoul : Soul
 {
     protected bool isTouchingGround
@@ -33,6 +38,8 @@ public class RobotSoul : Soul
         Move(Vector2.zero);
     }
 
+    // This method is not completely accurate, but after three weekends I should focus on finishing
+    // instead.
     protected IEnumerator Rotate(float rotation, float seconds)
     {
         if (rotation == 0) yield break;
@@ -66,6 +73,7 @@ public class RobotSoul : Soul
         return creature.Think(thought);
     }
 
+    // These two don't work like I wanted them to. :(
     protected IEnumerator WaitGroundEnter()
     {
         while (isTouchingGround) yield return null;

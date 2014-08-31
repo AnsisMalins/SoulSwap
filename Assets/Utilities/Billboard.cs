@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// I copypasted this code from the Internet after a short attempt at own solution.
+
 public class Billboard : MonoBehaviour
 {
     private void Update()

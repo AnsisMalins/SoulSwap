@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+// This part I'm the most proud of. :) The Swiss army knife to cut through the stupidity of Unity.
+
 public static class Util
 {
     /// <summary>Creates objects. Use only when loading.</summary>

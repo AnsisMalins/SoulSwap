@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// Pinkie Pie bounces around.
+
 public class PinkiePieSoul : RobotSoul
 {
     public string[] thoughts;

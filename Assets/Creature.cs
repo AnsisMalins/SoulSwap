@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// Your basic living creature (Pawn in UE4) that can be possessed by a soul (Controller in UE4).
+// Provides a basic API to souls and translates that to forces and rotation in the world.
+
 public class Creature : MonoBehaviour
 {
     public float jumpHeight = 1;
+    // Movement acts like a joystick. A vector of length one is full throttle in that direction.
     public Vector2 movement;
     public float movementForce = 300;
+    // To rotate, just add the delta (e.g. from your mouse).
     public float rotation;
     public float rotationSpeed = 1;
     public Vector3 thoughtBubblePosition = new Vector3(0, 2, 0);
@@ -25,6 +30,9 @@ public class Creature : MonoBehaviour
         if (isTouchingGround) _jump = true;
     }
 
+    // This is the core mechanic of the game. I engineered everything to make it as simple as
+    // possible. Swapping souls requires just swapping their parents (using extension methods to
+    // negate some Unity sillines. The method is a bit ugly as it assumes a single camera, etc.
     public void SwapSouls(GameObject mySoul)
     {
         var cameraTransform = Scene.current.mainCamera.transform;

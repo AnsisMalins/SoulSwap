@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// Rainbow Dash moves back and forth at high speed.
+
 public class RainbowDashSoul : RobotSoul
 {
     public Vector2 moveTime;

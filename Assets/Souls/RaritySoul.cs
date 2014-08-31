@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// Rarity just sits in place and turns a bit.
+
 public class RaritySoul : RobotSoul
 {
     public Vector2 waitInterval;

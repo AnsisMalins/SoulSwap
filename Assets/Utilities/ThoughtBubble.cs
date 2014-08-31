@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// The 3D equivalent of the good old message box without buttons but with a cypewriter effect. I
+// used it to differentiate the various AIs.
+
 public class ThoughtBubble : MonoBehaviour
 {
     public float showTime = 2;
