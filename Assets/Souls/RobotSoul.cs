@@ -66,6 +66,13 @@ public class RobotSoul : Soul
         }
     }
 
+    protected IEnumerator Teleport(Vector3 localPosition)
+    {
+        var creature = gameObject.Parent<Creature>();
+        if (creature != null) creature.Teleport(localPosition);
+        return Util.emptyCoroutine;
+    }
+
     protected IEnumerator Think(string thought)
     {
         var creature = gameObject.Parent<Creature>();

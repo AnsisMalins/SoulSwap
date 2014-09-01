@@ -46,6 +46,11 @@ public class Creature : MonoBehaviour
         otherSoul.SetParent(gameObject);
     }
 
+    public void Teleport(Vector3 localPosition)
+    {
+        transform.position += localPosition;
+    }
+
     public IEnumerator Think(string text)
     {
         return ThoughtBubble.Show(gameObject, thoughtBubblePosition, text);
